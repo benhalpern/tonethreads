@@ -316,11 +316,15 @@ input[type="submit"]{
 @media only screen and (max-width: 580px)  {
   .half{
     width:100% !important;
+
   }
   .container{
     width:100% !important;
     &.second{
       margin:0px auto !important;
+      .half{
+        width:90% !important;;
+      }
     }
   }
   .positioner{

@@ -257,6 +257,8 @@ input[type="submit"] {
     width: 100% !important; }
     .container.second {
       margin: 0px auto !important; }
+      .container.second .half {
+        width: 90% !important; }
 
   .positioner {
     display: none !important; } }
