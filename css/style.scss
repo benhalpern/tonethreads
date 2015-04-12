@@ -1,0 +1,329 @@
+$turkoise: #40a7c5;
+$blackish: #292929;
+
+body{
+  color:$blackish;
+  margin:0;
+  padding:0;
+}
+*{
+  outline: none;
+}
+
+#header{
+  position:fixed;
+  height:48px;
+  background:lighten($blackish,8%);
+  right:0;top:0;left:0;
+  z-index:10000000;
+  img{
+    height:43px;
+    margin-left:10px;
+    margin-top:3px;
+  }
+}
+.container{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  width:1160px;
+  margin:75px auto 0px;
+  background:white;
+  text-align:center;
+  overflow:hidden;
+  &.second{
+    margin:-70px auto;
+    .half{
+      text-align:left;
+      width:40%;
+      padding:5%;
+      line-height:1.4em;
+      h1{
+        line-height:1.2em;
+      }
+    }
+  }
+  .half{
+    width:50%;
+    float:left;
+    position:relative;
+    &.second{
+      margin-top:15px;
+    }
+    hr{
+      width:84%;
+      margin:4px auto 20px;
+      display: block; height: 1px;
+      border: 0; border-top: 3px solid #ededed;
+    }
+  }
+
+}
+
+.form{
+  width:100%;
+}
+
+.shirt{
+  -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+  background: #fff url("./shirts/white.png");
+  background-repeat: no-repeat;
+  background-position: center 0px;
+  background-size: cover;
+  height:650px;
+  margin-bottom:100px;
+
+  &.color-black{
+    background: #fff url("./shirts/black.png");
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    background-size: cover;
+
+  }
+  &.color-blue{
+    background: #fff url("./shirts/blue.png");
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    background-size: cover;
+
+  }
+  &.color-green{
+    background: #fff url("./shirts/green.png");
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    background-size: cover;
+
+  }
+  &.color-orange{
+    background: #fff url("./shirts/orange.png");
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    background-size: cover;
+
+  }
+  &.color-pink{
+    background: #fff url("./shirts/pink.png");
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    background-size: cover;
+
+  }
+  &.color-purple{
+    background: #fff url("./shirts/purple.png");
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    background-size: cover;
+
+  }
+  &.color-red{
+    background: #fff url("./shirts/red.png");
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    background-size: cover;
+
+  }
+  &.color-yellow{
+    background: #fff url("./shirts/yellow.png");
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    background-size: cover;
+
+  }
+
+  button.upload-butt{
+    background:rgba(255,255,255,0.1);
+    border:4px solid $turkoise;
+    color: $turkoise;
+    font-size:50px;
+    width:150px;
+    height:150px;
+    vertical-align:60px;
+    margin-top:160px;
+    cursor:pointer;
+    padding-bottom:20px;
+    &.invalid{
+      border: 4px solid #ff003f;
+      color:#ff003f;
+
+    }
+  }
+  .canvas{
+    padding-top:145px;
+    height:400px;
+    img{
+      width:220px;
+    }
+  }
+  .positioner{
+    display:none;
+    opacity:0.7;
+    font-size:16px;
+    width:40px;
+    margin-top:-380px;
+    margin-left:138px;
+    position:absolute;
+    button{
+      border:0px;
+      width:40px;
+      font-size:40px;
+      cursor:pointer;
+      background:rgba(0,0,0,0)
+    }
+    .inches{
+      padding-left:7px;
+      font-weight:bold;
+    }
+  }
+  &:hover{
+    .positioner{
+      display:block;
+    }
+  }
+  .buttons{
+    width:100%;
+    position:absolute;
+    bottom:60px;
+    right:0;
+    left:0;
+    &.after-upload{
+      margin-top:95px !important;
+    }
+
+  }
+  button.color{
+    border:1px solid #d3d3d3;
+    padding:17px;
+    margin:3px;
+    cursor:pointer;
+    &:hover{
+      opacity:0.9;
+    }
+  }
+  button.color-white{
+    background: #ededed;
+  }
+  button.color-black{
+    background: #373737;
+  }
+  button.color-blue{
+    background: #164d7c;
+  }
+  button.color-green{
+    background: #3b9a46;
+  }
+  button.color-orange{
+    background: #ca6410;
+  }
+  button.color-pink{
+    background: #d142c0;
+  }
+  button.color-purple{
+    background: #994fc2;
+  }
+  button.color-red{
+    background: #c34054;
+  }
+  button.color-yellow{
+    background: #d9ab20;
+  }
+
+}
+
+.loader{
+  height:180px;
+  width:180px;
+  margin: auto;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin-top:200px;
+  color:#383037;
+  font-size:13px;
+  text-align:center;
+  background:rgba(255,255,255,0.80);
+  box-shadow:0 0 25px rgba(0,0,0,0.32);
+  border:1px solid #C4C4C4;
+  z-index:5000;
+  .on-call-loader-text{
+    text-align:center;
+    padding-top:6px;
+  }
+
+  img.loader-image{
+    margin-top:48px;
+  }
+  .lock{
+    margin-top:12px;
+    text-align:center;
+    opacity:0.7;
+    display:none;
+  }
+}
+
+.shirt-file{
+  display:none;
+}
+
+.card-type{
+  position:absolute;
+  margin-top:-60px;
+  margin-left:480px;
+  font-size:10px;
+  color:#0bcb2f;
+}
+
+input{
+  width:84%;
+  margin:auto;
+  padding:12px;
+  font-size:28px;
+  margin-bottom:25px;
+  border: 0px;
+  border: 1px solid #c3dbe0;
+  &.half-input{
+    width:47%;
+    margin-left:3%
+  }
+  &.quarter-input{
+    width:25%;
+  }
+  &.invalid{
+    border: 1px solid #ff003f;
+    background:#e8e8e8
+  }
+  &.valid{
+    border: 1px solid #0bcb2f;
+    background:#e3ffe6;
+  }
+}
+.eighty{
+  width:84%;
+  margin:auto;
+
+}
+
+input[type="submit"]{
+  background:white;
+  border:6px solid $turkoise;
+  color:#40a7c5;
+  font-size:40px;
+  font-weight:bold;
+  padding:18px;
+  cursor:pointer;
+  &:hover{
+    opacity:0.9;
+  }
+
+}
+
+@media only screen and (max-width: 580px)  {
+  .half{
+    width:100% !important;
+  }
+  .container{
+    width:100% !important;
+    &.second{
+      margin:0px auto !important;
+    }
+  }
+  .positioner{
+    display:none !important;
+  }
+}
