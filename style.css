@@ -25,7 +25,8 @@ body {
   margin: 75px auto 0px;
   background: white;
   text-align: center;
-  overflow: hidden; }
+  overflow: hidden;
+  min-height: 650px; }
   .container.second {
     margin: -70px auto; }
     .container.second .half {
